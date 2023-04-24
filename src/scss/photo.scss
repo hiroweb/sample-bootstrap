@@ -15,6 +15,11 @@ $info: #20799e;         // ディープシアン
 @import "../../node_modules/bootstrap/scss/bootstrap.scss"; // Bootstrap 5のCSSをインポート
 @import "../../node_modules/lightgallery/css/lightgallery-bundle.min.css";
 
+
+.display-4{
+  font-family: 'Hannari';
+}
+
 body {
   margin: 0;
   font-family: -apple-system, "BlinkMacSystemFont", "Helvetica Neue", Helvetica, "Arial", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
