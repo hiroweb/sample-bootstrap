@@ -2,16 +2,15 @@
 // import { createApp } from 'vue';
 // import VueApp from './VueApp.vue';
 
-import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"; // Bootstrap 5のJavaScriptをインポート
+import "bootstrap/dist/js/bootstrap.min.js"; // Bootstrap 5のJavaScriptをインポート
 
 import my from './my.js';
 import common from './common.js';
-import '../scss/photo.scss';
+import '../scss/index.scss';
 import lightGallery from 'lightgallery';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
-import add from './add.ts';
 
 
 // createApp(VueApp).mount("#vue-root");

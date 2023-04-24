@@ -9,7 +9,7 @@ module.exports = {
   mode:'development',
   devtool:'source-map',
   entry:{
-    photo:'./src/js/photo.js',
+    index:'./src/js/index.js',
   },
 
   output:{
@@ -143,10 +143,10 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/photo.html',
+      template: 'src/index.html',
       filename: 'index.html',
       inject: 'body',
-      chunks: ['photo'],
+      chunks: ['index'],
       minify: false,
       indentSize: 4,
       indentWithTabs: false,

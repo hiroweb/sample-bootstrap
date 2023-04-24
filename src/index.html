@@ -1,282 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css"
-/>
-  <title>Document</title>
-</head>
-<body>
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container title-container has-text-centered">
-        <h1 class="title">
-          sample websites
-          <!-- <div class="tags has-addons is-pulled-right">
-						<span class="tag">Version</span>
-						<span class="tag is-info">1.2.3</span>
-					</div> -->
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
 
-          <!-- <img src="https://awesome.re/badge-flat2.svg"> -->
-        </h1>
-        <h2 class="subtitle">Based on the <a href="https://bulma.io">Bulma</a> CSS Framework</h2>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </section>
-  <div class="container content-wrapper mt-6">
-    <div class="columns is-multiline">
-      <div class="column is-6">
-        <div class="card card1" style="animation-duration: 700ms; animation-name: slideDown; animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5); animation-delay: 200ms;">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span>Bulma Sushi Restaurant</span>
-              <span class="is-pulled-right">
-                <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile support"></i></span>
-                <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop support"></i></span>
-                <span class="tag is-primary">0.9.0</span>
-              </span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <a href="/sushi/"><img src="<%= require('./images/website-sushi.jpg') %>"  alt="Sushi template screenshot"></a>
+    <title>Bootstrap5 Photo Studio</title>
 
-            </figure>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navScrollspy">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+      <div class="container">
+        <a href="/" class="navbar-brand"><i class="fas fa-camera-retro" aria-hidden="true"></i> Bootstrap Photo Studio</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="navbarNav" style="width: 70%;">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white">メニュー</h5>
+            <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times"></i></button>
           </div>
-          <footer class="card-footer">
-            <a class="card-footer-item" href="/sushi/" target="_blank">Preview</a>
-            <!-- <a class="card-footer-item" href="https://github.com/restylianos/bulma-tropico-template" target="_blank">Source code</a> -->
-          </footer>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="card card2" style="animation-duration: 700ms; animation-name: slideDown; animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5); animation-delay: 400ms;">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span>Bulma My Dishes</span>
-              <span class="is-pulled-right">
-                <span class="tag is-success">Updated</span>
-                <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile support"></i></span>
-                <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop support"></i></span>
-                <span class="tag is-primary">0.9.0</span>
-              </span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <a href="/dish/"><img src="<%= require('./images/website-dish.jpg') %>"  alt="Sushi template screenshot"></a>
-            </figure>
-          </div>
-          <footer class="card-footer">
-            <a href="/dish/" class="card-footer-item" target="_blank">Preview</a>
-            <a href="#" class="card-footer-item" target="_blank">Source Code</a>
-          </footer>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="card card3" style="animation-duration: 700ms; animation-name: slideDown; animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5); animation-delay: 600ms;">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span>Bootstrap Photo Studio</span>
-              <span class="is-pulled-right">
-                <span class="tag is-success">Updated</span>
-                <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile support"></i></span>
-                <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop support"></i></span>
-                <span class="tag is-primary">0.9.0</span>
-              </span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <a href="/photo/"><img src="<%= require('./images/website-photo.jpg') %>"  alt="Sushi template screenshot"></a>
-            </figure>
-          </div>
-          <footer class="card-footer">
-            <a href="/photo/" class="card-footer-item" target="_blank">Preview</a>
-            <a href="#" class="card-footer-item" target="_blank">Source Code</a>
-          </footer>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="card card4" style="animation-duration: 700ms; animation-name: slideDown; animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5); animation-delay: 800ms;">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span>Product Landing Page</span>
-              <span class="is-pulled-right">
-                <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile support"></i></span>
-                <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop support"></i></span>
-                <span class="tag is-primary">0.9.0</span>
-              </span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <img src="previews/product_landing_page.png" alt="Product/App Landing Page template screenshot">
-            </figure>
-          </div>
-          <footer class="card-footer">
-            <a class="card-footer-item" href="http://bulma-template.runkodapps.com/" target="_blank">Preview</a>
-            <a class="card-footer-item" href="https://github.com/hellobetkowski/bulma-product-landing-page-template/" target="_blank">Source code</a>
-          </footer>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="card card5" style="animation-duration: 700ms; animation-name: slideDown; animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5); animation-delay: 1000ms;">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span>CV</span>
-              <span class="is-pulled-right">
-                <span class="tag is-success">Updated</span>
-                <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile support"></i></span>
-                <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop support"></i></span>
-                <span class="tag is-primary">0.9.0</span>
-              </span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <img src="previews/cv.png" alt="CV template screenshot">
-            </figure>
-          </div>
-          <footer class="card-footer">
-            <a class="card-footer-item" href="https://aldi.github.io/bulma-cv-template/" target="_blank">Preview</a>
-            <a class="card-footer-item" href="https://github.com/aldi/bulma-cv-template/" target="_blank">Source code</a>
-          </footer>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="card card6" style="animation-duration: 700ms; animation-name: slideDown; animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5); animation-delay: 1200ms;">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span>Rent</span>
-              <span class="is-pulled-right">
-                <span class="tag is-success">Updated</span>
-                <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile support"></i></span>
-                <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop support"></i></span>
-                <span class="tag is-primary">0.9.0</span>
-              </span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <img src="previews/rent.png" alt="Rent template screenshot">
-            </figure>
-          </div>
-          <footer class="card-footer">
-            <a class="card-footer-item" href="https://aldi.github.io/bulma-rent-template/" target="_blank">Preview</a>
-            <a class="card-footer-item" href="https://github.com/aldi/bulma-rent-template/" target="_blank">Source code</a>
-          </footer>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="card card7" style="animation-duration: 700ms; animation-name: slideDown; animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5); animation-delay: 1400ms;">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span>Hotel</span>
-              <span class="is-pulled-right">
-                <span class="tag is-success">Updated</span>
-                <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile support"></i></span>
-                <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop support"></i></span>
-                <span class="tag is-primary">0.9.0</span>
-              </span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <img src="previews/hotel.png" alt="Hotel template screenshot">
-            </figure>
-          </div>
-          <footer class="card-footer">
-            <a class="card-footer-item" href="https://aldi.github.io/bulma-hotel-template/" target="_blank">Preview</a>
-            <a class="card-footer-item" href="https://github.com/aldi/bulma-hotel-template/" target="_blank">Source code</a>
-          </footer>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="card card8" style="animation-duration: 700ms; animation-name: slideDown; animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5); animation-delay: 1600ms;">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span>Event Participation</span>
-              <span class="is-pulled-right">
-                <span class="tag is-success">Updated</span>
-                <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile support"></i></span>
-                <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop support"></i></span>
-                <span class="tag is-primary">0.9.0</span>
-              </span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <img src="previews/event.png" alt="Event Participation template screenshot">
-            </figure>
-          </div>
-          <footer class="card-footer">
-            <a href="https://aldi.github.io/bulma-event-participation-template/" class="card-footer-item" target="_blank">Preview</a>
-            <a href="https://github.com/aldi/bulma-event-participation-template/" class="card-footer-item" target="_blank">Source Code</a>
-          </footer>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="card">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span>Coming Soon</span>
-              <span class="is-pulled-right">
-                <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile support"></i></span>
-                <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop support"></i></span>
-                <span class="tag is-primary">0.9.0</span>
-              </span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <img src="previews/coming_soon.png" alt="Coming Soon template screenshot">
-            </figure>
-          </div>
-          <footer class="card-footer">
-            <a href="https://aldi.github.io/bulma-coming-soon-template/" class="card-footer-item" target="_blank">Preview</a>
-            <a href="https://github.com/aldi/bulma-coming-soon-template/" class="card-footer-item" target="_blank">Source Code</a>
-          </footer>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="card">
-          <header class="card-header">
-            <p class="card-header-title has-text-centered">
-              <span>Your New Template?</span>
-            </p>
-          </header>
-          <div class="card-content">
-            <figure class="image">
-              <img src="previews/dummy.png" alt="Your future template screenshot">
-            </figure>
-          </div>
-          <footer class="card-footer">
-            <a href="https://github.com/aldi/awesome-bulma-templates/blob/master/CONTRIBUTING.md" class="card-footer-item">Visit the Contribution Guide</a>
-            <a href="https://github.com/aldi/awesome-bulma-templates/pulls" class="card-footer-item">Submit a Pull Request</a>
-          </footer>
-        </div>
-      </div>
-    </div>
-    <div class="container content-wrapper mt-6">
-      <div class="columns">
-        <div class="column is-12">
-          <div class="card">
-            <div class="box">
-              <p class="has-text-centered">More templates coming soon. Stay tuned!</p>
-            </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav" id="navScrollspy">
+              <li class="nav-item">
+                <a class="nav-link" href="#section-hero">トップ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-description">このサイトについて</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#section-trailer">Trailer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-showcase">Showcase</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-features">特徴</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-pricing">価格表</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-reviews">お客さまの声</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </nav>
+
+
+
+
+
+		<section id="section-hero" class="text-center text-white d-flex justify-content-center align-items-center py-5">
+			<div class="container">
+				<h1 class="display-2 text-primary text-uppercase mt-5 text-with-shadow">Bootstrap Test Site</h1>
+				<p class="display-4">写真置き場</p>
+				<p class="lead text-uppercase">dokokano kouen</p>
+				<a href="#0" class="btn btn-lg btn-primary"><i class="fab fa-google-play" aria-hidden="true"></i> もっとみる</a>
+			</div>
+		</section>
+		<div class="container">
+			<section id="section-description" class="mt-5">
+				<h2 class="display-4 text-center">にんじんを探せ！</h2>
+        <p>ある日のこと、動物たちの住む森で大変なことが起こりました。にんじんが突然なくなってしまったのです。にんじんは森の動物たちの大切な食べ物であり、みんなはにんじんを食べないと元気に過ごせません。</p>
+        <p>リスのチップ、ウサギのミミ、カラスのカーシャは仲良しの友達同士。三匹はにんじんを探すために森中を駆け回りました。しかし、どこを探してもにんじんの姿はありません。</p>
+        <p>途方に暮れている三匹の前に、賢い老いたカメのオヤジが現れました。オヤジは三匹に「にんじんを探すためには、協力が大切だよ。」と言いました。</p>
+        <p>三匹はオヤジの言葉に従い、協力して森中を探し回りました。チップは木の上を、ミミは地面を、カーシャは空中を探しました。すると、ミミがにんじんの跡を見つけました！</p>
+        <p>三匹はにんじんを探し続け、最終的にはにんじんを見つけることができました。みんなで力を合わせてにんじんを運び、森に平和が戻りました。</p>
+        <p>絵本「にんじんを探せ！」は、協力や友情の大切さを伝える童話です。三匹の仲良しの動物たちが協力してにんじんを探す姿勢が、子どもたちの協力やチームワークを促します。また、老いたカメのオヤジの知恵も子どもたちにとっての良い示唆となります。</p>
+
+      </section>
+
+			<section id="section-trailer" class="mt-5">
+
+				<h2 class="display-4 text-center">動画</h2>
+				<p class="text-center">動画のサンプル動画のサンプル動画のサンプル動画のサンプル</p>
+				<div class="ratio ratio-16x9">
+					<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4"></iframe>
+				</div>
+			</section>
+			<section id="section-showcase" class="mt-5">
+				<h2 class="display-4 text-center">カルーセルのサンプル</h2>
+				<p class="text-center">カルーセルのサンプルカルーセルのサンプルカルーセルのサンプル</p>
+				<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+						<button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+						<button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+						<button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+					</div>
+					<div class="carousel-inner" role="listbox">
+						<div class="carousel-item active">
+							<img src="<%= require('./images/E0Wu2GWVkAYGcD-.jpg') %>" alt="Slide #1" class="d-block img-fluid">
+							<div class="carousel-caption">
+								<h3 class="display-4">藤</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="<%= require('./images/E0Wu4KwUUAM6SuH.jpg') %>" alt="Slide #2" class="d-block img-fluid">
+							<div class="carousel-caption">
+								<h3 class="display-4">藤</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="<%= require('./images/E0Wu4woUUAQab6c.jpg') %>" alt="Slide #3" class="d-block img-fluid">
+							<div class="carousel-caption">
+								<h3 class="display-4">藤</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="<%= require('./images/E0Wu5MgVcAAJLru.jpg') %>" alt="Slide #4" class="d-block img-fluid">
+							<div class="carousel-caption">
+								<h3 class="display-4">藤</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button type="button" class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</section>
+			</div>
+
+
+			<section id="lightgallery" class="py-5 my-5 bg-light">
+				<div class="container">
+        <h3 class="text-center mb-sm-4 display-5">カラムのサンプル</h3>
+        <div class="row mb-4 align-items-center flex-md-row-reverse">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+						<a class="items" href="<%= require('./images/EMOZwglVUAIcBUH.jpg')%>">
+							<img src="<%= require('./images/EMOZwglVUAIcBUH.jpg')%>" class="img-fluid">
+						</a>
+          </div>
+          <div class="col-12 col-md-6">
+            <h2>森のくまさん</h2>
+            <p>ある日、森の中に小さな家がありました。家の中には三匹のくまが住んでいました。くまたちは大きなくま、中くま、小さなくまでした。ある日、三匹のくまは森を散歩していると、家の中に入り込んでいるおおかみの赤ちゃんを見つけました。くまたちは驚きましたが、赤ちゃんのことを可愛がりました。そして、三匹のくまは赤ちゃんを家族として迎え入れることにしました。赤ちゃんのおおかみはとても幸せそうに笑い、三匹のくまと一緒に幸せに過ごしました。</p>
+            <a href="#0" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="row mb-4 align-items-center">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <a class="items" href="<%= require('./images/EMOZwgmU8AAanni.jpg')%>">
+							<img src="<%= require('./images/EMOZwgmU8AAanni.jpg')%>" class="img-fluid">
+						</a>
+          </div>
+          <div class="col-12 col-md-6">
+            <h2>浦島太郎</h2>
+            <p>昔々、ある漁師の太郎という若者がいました。太郎はある日、海に出かけて魚を捕まえていましたが、突然大きな亀が現れました。亀は太郎に話しかけて、自分を助けてくれると願いました。太郎は亀を助け、亀は感謝の気持ちを込めて太郎を深海の宮殿に連れて行きました。</p>
+            <p>宮殿に着くと、太郎は美しい海の姫様と出会いました。姫様は太郎を歓迎し、太郎も姫様に惹かれました。太郎は宮殿での生活を楽しむ一方で、地上の世界を忘れてしまいました。しかし、ある日、太郎は地上の世界を思い出し、姫様に別れを告げて宮殿を去ることを決意しました。</p>
+            <p>太郎は亀の背に乗って地上に戻りました。帰還した太郎は、自分の家や村のことを思い出し、家族や友人たちと再会しました。太郎の冒険の話は村中に広まり、多くの人々が太郎の話を聞きに訪れました。</p>
+            <p>太郎は亀との出会いをきっかけに、海の大切さや人間関係の大切さを学びました。彼は自分の経験をもとに、人々に海の保護や人間関係の大切さを伝えることになりました。そして、太郎は幸せな人生を歩みました。</p>
+            <a href="#0" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="row mb-4 align-items-center flex-md-row-reverse">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+						<a class="items" href="<%= require('./images/EMOZwgmU8AEtkQN.jpg')%>">
+							<img src="<%= require('./images/EMOZwgmU8AEtkQN.jpg')%>" class="img-fluid">
+						</a>
+          </div>
+          <div class="col-12 col-md-6">
+            <h2>金太郎</h2>
+            <p>昔々、山に住んでいた金太郎という男の子がいました。金太郎は非常に強く、大きな体を持っており、山の動物たちからも恐れられていました。ある日、山の頂上で金太郎は鬼の軍団が村を襲っているのを目撃しました。</p>
+            <p>金太郎は怒りを覚え、鬼を倒すことを決意しました。金太郎は山を下りて村に向かい、鬼たちと壮絶な戦いを繰り広げました。金太郎の強さに鬼たちは次々と敗れ、最終的に鬼の首領を倒しました。</p>
+            <p>村の人々は金太郎に感謝し、彼を英雄として祝福しました。金太郎は村に住むことになり、山の動物たちや村の人々と共に平和な日々を送りました。彼は強さを持ちながらも、優しさと勇気を持った存在として尊敬を受ける存在となりました。</p>
+            <a href="#0" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="row mb-4 align-items-center">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+						<a class="items" href="<%= require('./images/EN2Q0TAU4AAi4U3.jpg')%>">
+							<img src="<%= require('./images/EN2Q0TAU4AAi4U3.jpg')%>" class="img-fluid">
+						</a>
+          </div>
+          <div class="col-12 col-md-6">
+            <h2>おおかみとひつじの友達</h2>
+            <p>昔々、深い森の中におおかみのキラとひつじのポンが住んでいました。キラは自慢の美しい毛並みを持っていましたが、一匹狼で、友達がいませんでした。一方のポンは、小さくてふわふわの毛が特徴で、明るく社交的な性格でした。</p>
+            <p>ポンはある日、キラに声をかけました。「キラさん、一緒に遊びましょう！」</p>
+            <p>しかし、キラは「おおかみとひつじは友達になれないよ」と言って断ってしまいました。ポンはがっかりして森を飛び出してしまいました。</p>
+            <p>すると、森の外には危険な狐が潜んでいました。ポンは怖い思いをしましたが、その時、キラが駆けつけてポンを助けました。キラは自分の毛を使ってポンを温め、優しく励ましてくれました。</p>
+            <p>ポンはキラに感謝し、キラも自分の心の中に優しい感情が芽生えました。二匹は友達になることを決意しました。</p>
+            <p>以来、キラとポンは一緒に遊び、森の中を走り回りました。二匹の友情は深まり、森の動物たちもみんなを見習って仲良しになりました。そして、森には笑い声と幸福が満ちあふれるようになりました。</p>
+            <p>ある日、森の中で大きなパーティーが開かれました。キラとポンは一緒に参加し、みんなで楽しい時間を過ごしました。</p>
+            <a href="#0" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+			</div>
+			</section>
+			<section id="section-features" class="mt-5">
+				<div class="container">
+				<h2 class="display-5 text-center">弊社の強み</h2>
+				<div class="row">
+					<div class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center mb-5">
+						<div class="h1"><svg class="svg-inline--fa fa-paint-brush fa-w-16 mb-4 text-info" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paint-brush" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M167.02 309.34c-40.12 2.58-76.53 17.86-97.19 72.3-2.35 6.21-8 9.98-14.59 9.98-11.11 0-45.46-27.67-55.25-34.35C0 439.62 37.93 512 128 512c75.86 0 128-43.77 128-120.19 0-3.11-.65-6.08-.97-9.13l-88.01-73.34zM457.89 0c-15.16 0-29.37 6.71-40.21 16.45C213.27 199.05 192 203.34 192 257.09c0 13.7 3.25 26.76 8.73 38.7l63.82 53.18c7.21 1.8 14.64 3.03 22.39 3.03 62.11 0 98.11-45.47 211.16-256.46 7.38-14.35 13.9-29.85 13.9-45.99C512 20.64 486 0 457.89 0z"></path></svg><!-- <i class="fas fa-paint-brush mb-4 text-info" aria-hidden="true"></i> --></div>
+						<h3 class="h4 mb-4 text-center">強みのタイトル</h3>
+						<p>Illum nesciunt, nostrum laboriosam provident sed inventore molestias blanditiis.</p>
+						<a href="#0" class="btn btn-sm btn-info mt-auto">Read more...</a>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center mb-5">
+						<div class="h1"><svg class="svg-inline--fa fa-video fa-w-18 mb-4 text-info" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="video" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z"></path></svg><!-- <i class="fas fa-video mb-4 text-info" aria-hidden="true"></i> --></div>
+						<h3 class="h4 mb-4 text-center">強みのタイトル</h3>
+						<p>Illum nesciunt, nostrum laboriosam provident sed inventore molestias blanditiis.</p>
+						<a href="#0" class="btn btn-sm btn-info mt-auto">Read more...</a>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center mb-5">
+						<div class="h1"><svg class="svg-inline--fa fa-instagram fa-w-14 mb-4 text-info" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i class="fab fa-instagram mb-4 text-info" aria-hidden="true"></i> --></div>
+						<h3 class="h4 mb-4 text-center">強みのタイトル</h3>
+						<p>Illum nesciunt, nostrum laboriosam provident sed inventore molestias blanditiis.</p>
+						<a href="#0" class="btn btn-sm btn-info mt-auto">Read more...</a>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center mb-5">
+						<div class="h1"><svg class="svg-inline--fa fa-mobile fa-w-10 mb-4 text-info" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg><!-- <i class="fas fa-mobile mb-4 text-info" aria-hidden="true"></i> --></div>
+						<h3 class="h4 mb-4 text-center">強みのタイトル</h3>
+						<p>Illum nesciunt, nostrum laboriosam provident sed inventore molestias blanditiis.</p>
+						<a href="#0" class="btn btn-sm btn-info mt-auto">Read more...</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			<section id="section-pricing" class="mt-5">
+				<div class="container">
+				<h2 class="display-5 text-center">ご葬儀プラン</h2>
+				<div class="row">
+					<div class="col-12 col-md-4 mb-4">
+						<div class="card card-outline-success">
+							<div class="card-header bg-success text-white text-center">
+								<h2>火葬式</h2>
+								<h4>190,000</h4>
+							</div>
+							<div class="card-body">
+								<p class="card-text">含まれるもの</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><!-- <i class="fas fa-fw fa-paint-brush" aria-hidden="true"></i> --> 棺</li>
+								<li class="list-group-item"><!-- <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> --> 火葬</li>
+							</ul>
+							<div class="card-footer text-center">
+								<a href="#0" class="btn btn-success btn-lg">Select plan</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4 mb-4">
+						<div class="card card-outline-warning">
+							<div class="card-header bg-warning text-white text-center">
+								<h2>一日葬</h2>
+								<h4>350,000</h4>
+							</div>
+							<div class="card-body">
+								<p class="card-text">含まれるもの</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><!-- <i class="fas fa-fw fa-paint-brush" aria-hidden="true"></i> --> 棺</li>
+								<li class="list-group-item"><!-- <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> --> 棺</li>
+								<li class="list-group-item"><!-- <i class="fas fa-fw fa-cogs" aria-hidden="true"></i> --> 棺</li>
+							</ul>
+							<div class="card-footer text-center">
+								<a href="#0" class="btn btn-warning btn-lg">Select plan</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4 mb-4">
+						<div class="card card-outline-primary">
+							<div class="card-header bg-primary text-white text-center">
+								<h2>家族葬</h2>
+								<h4>480,000</h4>
+							</div>
+							<div class="card-body">
+								<p class="card-text">含まれるもの</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><!-- <i class="fas fa-fw fa-paint-brush" aria-hidden="true"></i> --> 棺</li>
+								<li class="list-group-item"><!-- <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> --> 棺</li>
+								<li class="list-group-item"><!-- <i class="fas fa-fw fa-cogs" aria-hidden="true"></i> --> 棺</li>
+								<li class="list-group-item"><!-- <i class="fas fa-fw fa-cloud" aria-hidden="true"></i> --> 棺</li>
+							</ul>
+							<div class="card-footer text-center">
+								<a href="#0" class="btn btn-primary btn-lg">Select plan</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</section>
+
+			<section id="section-reviews" class="mt-5">
+				<div class="container">
+				<h2 class="display-4 text-center">お客様の声</h2>
+				<div class="row mb-3">
+					<div class="col-12 col-md-6 col-xl-3 gx-5 gy-3">
+						<figure>
+							<blockquote class="blockquote">
+								<p>心温まる葬儀をありがとうございました。故人を思いやりと尊厳を持って見送っていただき、家族一同感謝しています。</p>
+							</blockquote>
+							<figcaption class="blockquote-footer">Firstname Lastname <time datetime="2020-09-01T12:00">(September 01 2020 12:00)</time></figcaption>
+						</figure>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3 gx-5 gy-3">
+						<figure>
+							<blockquote class="blockquote">
+								<p>葬儀の準備から終了まで、丁寧な対応と細やかな気遣いに感動しました。大切な家族を見送る中で、安心感を得ることができました。</p>
+							</blockquote>
+							<figcaption class="blockquote-footer">Firstname Lastname <time datetime="2020-09-01T12:00">(September 01 2020 12:00)</time></figcaption>
+						</figure>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3 gx-5 gy-3">
+						<figure>
+							<blockquote class="blockquote">
+								<p>スタッフの方々の温かい言葉や心遣いに、家族一同感謝しています。葬儀のセレモニーがより特別なものになりました。</p>
+							</blockquote>
+							<figcaption class="blockquote-footer">Firstname Lastname <time datetime="2020-09-01T12:00">(September 01 2020 12:00)</time></figcaption>
+						</figure>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3 gx-5 gy-3">
+						<figure>
+							<blockquote class="blockquote">
+								<p>葬儀の手続きから式典の進行まで、スムーズに対応していただきました。プロフェッショナリズムと人間味のあるサービスに感謝しています。</p>
+							</blockquote>
+							<figcaption class="blockquote-footer">Firstname Lastname <time datetime="2020-09-01T12:00">(September 01 2020 12:00)</time></figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+			</section>
+
+		<section id="section-newsletter" class="bg-secondary py-5">
+			<div class="container">
+				<form class="text-white">
+					<h2 class="display-4 text-center">お問い合わせ</h2>
+					<p class="lead text-center">お気軽にどうぞ</p>
+					<div class="row">
+						<div class="col-12 col-sm-6">
+							<div class="mb-3">
+								<label for="input-name" class="visually-hidden">Your name:</label>
+								<input type="text" class="form-control" placeholder="Firstname Lastname" id="input-name">
+							</div>
+						</div>
+						<div class="col-12 col-sm-6">
+							<div class="mb-3">
+								<label for="input-email" class="visually-hidden">Your email:</label>
+								<input type="email" class="form-control" placeholder="mail@example.com" id="input-email">
+							</div>
+						</div>
+					</div>
+					<div class="form-check mb-2">
+						<input type="checkbox" class="form-check-input" id="input-terms" value="terms">
+						<label class="form-check-label" for="input-terms">I have read and accept the <a href="#0" data-bs-toggle="modal" data-bs-target="#modal">terms and conditions</a>.</label>
+					</div>
+					<div class="d-flex justify-content-between">
+						<small class="form-text text-white w-75">You can unsubcribe from the mailing list at any time.</small>
+						<button type="submit" class="btn btn-dark">Sign up</button>
+					</div>
+				</form>
+				<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">&gt;
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalTitle">Terms and conditions</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat, urna ut pharetra ultricies, augue tellus euismod turpis, vitae semper ipsum augue a velit. Pellentesque id finibus velit. Ut sagittis maximus maximus. In aliquet enim sed turpis mollis ornare. Suspendisse elementum a magna eu luctus. Etiam tincidunt mattis mauris, non lobortis nulla tempor in. Sed lacinia metus viverra, scelerisque enim sed, sollicitudin magna. Sed non augue sit amet nisl tincidunt ultrices. Praesent nec lacus eget tortor ultricies pulvinar. Praesent euismod ut lorem sit amet bibendum.</p>
+								<p>Pellentesque vitae convallis magna. Morbi non elementum mi. Suspendisse at mollis arcu, eu tempus tellus. Aenean fringilla eleifend nisl. Aliquam erat volutpat. Sed a tortor quis tortor convallis mattis. Nunc congue massa vitae lectus dictum, a mattis metus dignissim.</p>
+								<p>Nulla feugiat, lorem sit amet vehicula hendrerit, velit eros pellentesque est, at dictum elit risus id diam. In ante lorem, blandit vel dui in, sagittis laoreet erat. Proin dictum sit amet urna ut placerat. Pellentesque laoreet, dolor vitae facilisis feugiat, quam quam gravida elit, nec sagittis orci metus at leo. In scelerisque felis vel neque lobortis ullamcorper. Praesent quis sagittis neque, nec eleifend neque. Suspendisse at consectetur eros. Mauris lectus libero, molestie vel dapibus sit amet, luctus gravida ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero neque, pretium quis malesuada eget, congue ac mauris.</p>
+								<p>Aenean quis tristique libero. Vestibulum sagittis, sapien gravida lobortis posuere, diam arcu auctor libero, at tempor mauris nulla vel odio. Phasellus semper eros rutrum mi scelerisque interdum. Maecenas euismod est sit amet justo vestibulum bibendum. Etiam scelerisque sodales nisi nec efficitur. Pellentesque arcu mauris, accumsan eget mollis at, ultrices id ante. Duis in mi eget nisi euismod gravida. Cras pharetra sollicitudin elit, vel eleifend felis dignissim non. Integer leo ex, feugiat eu lorem egestas, mollis suscipit nulla. Duis quis tellus nulla. Maecenas risus ipsum, fringilla at orci sit amet, mattis fringilla orci. Vivamus odio tellus, ornare eu leo id, pellentesque sodales ante.</p>
+								<p>Sed laoreet ut ligula eget fringilla. Suspendisse dapibus dui at ex dictum hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi efficitur ac purus eget dignissim. Aliquam ultrices, orci finibus sollicitudin tempus, elit metus scelerisque magna, a rhoncus justo nisl vitae lectus. Nam mollis sed est ut ullamcorper. Curabitur consequat feugiat erat quis molestie. Fusce suscipit sem et nulla dignissim, id malesuada felis laoreet. Cras leo ligula, vulputate id mi ac, gravida porta sem. Mauris ullamcorper lectus ac eleifend elementum. Ut id velit consequat, facilisis leo vitae, volutpat nisi. Nunc hendrerit libero mi. Integer scelerisque mattis neque placerat condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla eu odio mi. Duis interdum vulputate turpis pretium congue.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="bg-light">
+			<div class="container py-3 py-sm-5">
+				<div class="row">
+					<div class="col-12 col-sm-6 col-lg-3">
+						<h6>Quick links</h6>
+						<ul class="list-unstyled">
+							<li><a href="#0">Home</a></li>
+							<li><a href="#0">What's new?</a></li>
+							<li><a href="#0">Support</a></li>
+							<li><a href="#0">My account</a></li>
+							<li><a href="#0">Cancel subscription</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<h6>Information</h6>
+						<ul class="list-unstyled">
+							<li><a href="#0">About us</a></li>
+							<li><a href="#0">Jobs</a></li>
+							<li><a href="#0">Press info</a></li>
+							<li><a href="#0">Contact</a></li>
+							<li><a href="#0">Partnership</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<h6>Follow us</h6>
+						<ul class="list-unstyled">
+							<li><a href="#0"><!-- <i class="fab fa-fw fa-facebook" aria-hidden="true"></i> --> Facebook</a></li>
+							<li><a href="#0"><!-- <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> --> Instagram</a></li>
+							<li><a href="#0"><!-- <i class="fab fa-fw fa-twitter" aria-hidden="true"></i> --> Twitter</a></li>
+							<li><a href="#0"><!-- <i class="fab fa-fw fa-youtube" aria-hidden="true"></i> --> YouTube</a></li>
+							<li><a href="#0"><!-- <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> --> LinkedIn</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<h6>Our location</h6>
+						<address>
+							<strong>App Name</strong><br>
+							350 5th Avenue<br>
+							New York, NY 10118<br>
+							<svg class="svg-inline--fa fa-phone fa-w-16 fa-fw" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg><!-- <i class="fas fa-fw fa-phone" aria-hidden="true"></i> --><span class="visually-hidden">Telephone:</span> <a href="tel:+12127363100">(212) 736-3100</a><br>
+							<svg class="svg-inline--fa fa-inbox fa-w-18 fa-fw" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="inbox" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M567.938 243.908L462.25 85.374A48.003 48.003 0 0 0 422.311 64H153.689a48 48 0 0 0-39.938 21.374L8.062 243.908A47.994 47.994 0 0 0 0 270.533V400c0 26.51 21.49 48 48 48h480c26.51 0 48-21.49 48-48V270.533a47.994 47.994 0 0 0-8.062-26.625zM162.252 128h251.497l85.333 128H376l-32 64H232l-32-64H76.918l85.334-128z"></path></svg><!-- <i class="fas fa-fw fa-inbox" aria-hidden="true"></i> --><span class="visually-hidden">Mail:</span> <a href="mailto:info@appname.com">info@appname.com</a>
+						</address>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-6 col-lg-9">
+						<ul class="list-inline">
+							<li class="list-inline-item">© 2020 App Name, Inc.</li>
+							<li class="list-inline-item">All rights reserved.</li>
+							<li class="list-inline-item"><a href="#0" data-bs-toggle="modal" data-bs-target="#modal">Terms of use and privacy policy</a>.</li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="dropdown dropup">
+							<button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="languageMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg class="svg-inline--fa fa-language fa-w-20 fa-fw" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="language" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M152.1 236.2c-3.5-12.1-7.8-33.2-7.8-33.2h-.5s-4.3 21.1-7.8 33.2l-11.1 37.5H163zM616 96H336v320h280c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm-24 120c0 6.6-5.4 12-12 12h-11.4c-6.9 23.6-21.7 47.4-42.7 69.9 8.4 6.4 17.1 12.5 26.1 18 5.5 3.4 7.3 10.5 4.1 16.2l-7.9 13.9c-3.4 5.9-10.9 7.8-16.7 4.3-12.6-7.8-24.5-16.1-35.4-24.9-10.9 8.7-22.7 17.1-35.4 24.9-5.8 3.5-13.3 1.6-16.7-4.3l-7.9-13.9c-3.2-5.6-1.4-12.8 4.2-16.2 9.3-5.7 18-11.7 26.1-18-7.9-8.4-14.9-17-21-25.7-4-5.7-2.2-13.6 3.7-17.1l6.5-3.9 7.3-4.3c5.4-3.2 12.4-1.7 16 3.4 5 7 10.8 14 17.4 20.9 13.5-14.2 23.8-28.9 30-43.2H412c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h64v-16c0-6.6 5.4-12 12-12h16c6.6 0 12 5.4 12 12v16h64c6.6 0 12 5.4 12 12zM0 120v272c0 13.3 10.7 24 24 24h280V96H24c-13.3 0-24 10.7-24 24zm58.9 216.1L116.4 167c1.7-4.9 6.2-8.1 11.4-8.1h32.5c5.1 0 9.7 3.3 11.4 8.1l57.5 169.1c2.6 7.8-3.1 15.9-11.4 15.9h-22.9a12 12 0 0 1-11.5-8.6l-9.4-31.9h-60.2l-9.1 31.8c-1.5 5.1-6.2 8.7-11.5 8.7H70.3c-8.2 0-14-8.1-11.4-15.9z"></path></svg><!-- <i class="fas fa-fw fa-language" aria-hidden="true"></i> --> Change language</button>
+							<div class="dropdown-menu p-0" aria-labelledby="languageMenuButton">
+								<a href="#0" class="dropdown-item small px-1">English</a>
+								<a href="#0" class="dropdown-item small px-1">German</a>
+								<a href="#0" class="dropdown-item small px-1">French</a>
+								<a href="#0" class="dropdown-item small px-1">Spanish</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+    <a href="#" class="btn-back-to-top" title="トップへ戻る">
+      <i class="fas fa-chevron-up"></i> <!-- font-awesomeの△アイコン -->
+    </a>
 
 </body>
 </html>
