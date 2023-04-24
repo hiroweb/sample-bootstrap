@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'Hannari'; /* フォント名 */
+  /* フォーマットごとにパスを指定 */
+  src: url("../fonts/HannariMincho-Regular.ttf") format('truetype');
+}
+
+
+
+$primary: #194d80;      // 深い青色
+$secondary: #0c355e;    // 深い紺色
+$success: #1f8a70;      // ミントグリーン
+$danger: #b90c0c;       // 深い赤色
+$warning: #e69500;      // ゴールド
+$info: #20799e;         // ディープシアン
+@import "../../node_modules/bootstrap/scss/bootstrap.scss"; // Bootstrap 5のCSSをインポート
+@import "../../node_modules/lightgallery/css/lightgallery-bundle.min.css";
+
+body {
+  margin: 0;
+  font-family: -apple-system, "BlinkMacSystemFont", "Helvetica Neue", Helvetica, "Arial", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+
+
+#section-hero {
+  background-image: url('../images/Eza61gUVUAIgvEF.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba($primary, 0.5); /* 背景色を灰色の透明に設定 */
+  color: #fff; /* 文字色を白に設定 */
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  opacity: 0; /* 初期状態では透明にする */
+  transition: opacity 0.3s ease-in-out; /* フェードイン/フェードアウトのアニメーションを追加 */
+  z-index: 999; /* ボタンが他の要素に隠れないようにするためにz-indexを設定 */
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* 影を追加 */
+}
+
+.btn-back-to-top i {
+  font-size: 24px; /* font-awesomeのアイコンのサイズを設定 */
+}
+
+.btn-back-to-top:hover {
+  background-color: rgba($primary, 0.7); /* ホバー時の背景色を変更 */
+}
+
+.navbar-bg{
+  background-color: $primary;
+  position:fixed!important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  transition: .5s;
+  opacity:0.95;
+}
+
+.fixed-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/* 文字の光彩 */
+.text-with-shadow {
+  text-shadow: 0px 0px 10px rgb(255, 254, 197); /* ぼかしの強さと色を調整 */
+}
+
+
+// /* 背景色のあるセクション */
+// .section-with-background {
+//   position: relative;
+//   height: 300px;
+//   width: 100%;
+//   background-color: #74c23a;
+// }
+
+// .section-with-background::after {
+//   content: '';
+//   display: block;
+//   position: relative;
+//   left:0;
+//   bottom: 0;
+//   border-top: 60px solid transparent;  /* 透明 */ 
+//   border-left: 50vw solid transparent;  /* 透明 */ 
+//   border-right: 50vw solid #8B3DC5;  /* むらさき */ 
+//   border-bottom: 60px solid #8B3DC5;  /* むらさき */ 
+// }
+
+
+// @media only screen and (max-width: 2000px) {
+//   .section-with-background::after {
+//     border-left: 1000px solid transparent;  /* 実数で幅を指定 */
+//     border-right: 1000px solid #8B3DC5;  /* 実数で幅を指定 */
+//   }
+// }

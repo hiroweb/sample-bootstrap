@@ -1,0 +1,169 @@
+@charset "utf-8";
+@page { margin: 0 }
+body { margin: 0 }
+.sheet {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+/** Paper sizes **/
+body.A3           .sheet { width: 297mm; height: 419mm }
+body.A3.landscape .sheet { width: 420mm; height: 296mm }
+body.A4           .sheet { width: 210mm; height: 296mm }
+body.A4.landscape .sheet { width: 297mm; height: 209mm }
+body.A5           .sheet { width: 148mm; height: 209mm }
+body.A5.landscape .sheet { width: 210mm; height: 147mm }
+
+body.B3           .sheet { width: 364mm; height: 514mm }
+body.B3.landscape .sheet { width: 515mm; height: 363mm }
+body.B4           .sheet { width: 257mm; height: 363mm }
+body.B4.landscape .sheet { width: 364mm; height: 256mm }
+body.B5           .sheet { width: 182mm; height: 256mm }
+body.B5.landscape .sheet { width: 267mm; height: 181mm }
+
+body.N3           .sheet { width: 120mm; height: 234mm }
+
+
+
+/** Padding area **/
+.sheet.padding-0mm { padding: 0; }
+.sheet.padding-10mm { padding: 10mm; }
+.sheet.padding-15mm { padding: 15mm; }
+.sheet.padding-20mm { padding: 20mm; }
+.sheet.padding-25mm { padding: 25mm; }
+
+/** For screen preview **/
+@media screen {
+  body { background: #e0e0e0 }
+  .sheet {
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+    margin: 5mm;
+  }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+  body.A3.landscape { width: 420mm }
+  body.A3, body.A4.landscape { width: 297mm }
+  body.A4, body.A5.landscape { width: 210mm }
+  body.A5                    { width: 148mm }
+}
+// @import "../../node_modules/bulma/sass/utilities/_all";
+// @import "../../node_modules/bulma/sass/base/_all";
+// @import "../../node_modules/bulma/sass/elements/_all";
+// @import "../../node_modules/bulma/sass/form/_all";
+// @import "../../node_modules/bulma/sass/components/_all";
+// @import "../../node_modules/bulma/sass/grid/_all";
+// @import "../../node_modules/bulma/sass/helpers/_all";
+// @import "../../node_modules/bulma/sass/layout/_all";
+
+// 追記 ///////////////////////////
+
+
+$primary:#1e95d4;
+$info:#369cab;
+$base:#5FB2DF;
+$secondary: #1BC2B1;
+$document:#1C68BA;
+
+$kojin:#c3ad90;
+$mosyu:#877996;
+$renraku:#5176A4;
+
+$warning:#FFE08A;
+$danger:#F14668;
+
+
+
+//////////////////////////////////////////////////////////
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../../node_modules/bulma/sass/utilities/functions.sass";
+// 〇新しくsecondaryというテーマカラーを追加
+$secondary-invert: findColorInvert($secondary) !default;
+$secondary-light: findLightColor($secondary) !default;
+$secondary-dark: findDarkColor($secondary) !default;
+$document-invert: findColorInvert($document) !default;
+$document-light: findLightColor($document) !default;
+$document-dark: findDarkColor($document) !default;
+$kojin-invert: findColorInvert($kojin) !default;
+$kojin-light: findLightColor($kojin) !default;
+$kojin-dark: findDarkColor($kojin) !default;
+$mosyu-invert: findColorInvert($mosyu) !default;
+$mosyu-light: findLightColor($mosyu) !default;
+$mosyu-dark: findDarkColor($mosyu) !default;
+$renraku-invert: findColorInvert($renraku) !default;
+$renraku-light: findLightColor($renraku) !default;
+$renraku-dark: findDarkColor($renraku) !default;
+$base-invert: findColorInvert($base) !default;
+$base-light: findLightColor($base) !default;
+$base-dark: findDarkColor($base) !default;
+
+$custom-colors: (
+  'secondary': ($secondary, $secondary-invert, $secondary-light, $secondary-dark),
+  'document': ($document, $document-invert, $document-light, $document-dark),
+  'kojin': ($kojin, $kojin-invert, $kojin-light, $kojin-dark),
+  'mosyu': ($mosyu, $mosyu-invert, $mosyu-light, $mosyu-dark),
+  'renraku': ($renraku, $renraku-invert, $renraku-light, $renraku-dark),
+  'base': ($base, $base-invert, $base-light, $base-dark),
+);
+@import "../../node_modules/bulma/sass/utilities/derived-variables.sass";
+$tabs-link-active-border-bottom-color:$primary;
+$tabs-link-active-color:$primary;
+$tabs-toggle-link-active-background-color:$primary;
+$tabs-toggle-link-active-border-color:$primary;
+$tabs-toggle-link-active-color:$primary-invert;
+$breadcrumb-item-color:$primary;
+$breadcrumb-item-hover-color:$link-hover;
+
+@import "../../node_modules/bulma/sass/utilities/mixins.sass";
+@import "../../node_modules/bulma/sass/utilities/controls.sass";
+@import "../../node_modules/bulma/sass/utilities/extends.sass";
+
+//////////////////////////////////////////////////////////
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/elements/_all.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "../../node_modules/bulma/sass/components/_all.sass";
+//////////////////////////////////////////////////////////
+// Modal minimal setup
+// import modal-fx component
+$transition-duration: .3s;
+$transition-duration-newsPaper: .7s;
+$transition-duration-3dslit: .5s;
+$modal-perspective: 1300px;
+$modal-bg-color: rgba($black,.86);
+@import "../../node_modules/bulma/sass/components/modal-fx";
+//////////////////////////////////////////////////////////
+@import "../../node_modules/bulma/sass/grid/_all.sass";
+@import "../../node_modules/bulma/sass/helpers/_all.sass";
+@import "../../node_modules/bulma/sass/layout/_all.sass";
+
+html{
+  background-color:initial;
+}
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+
+
+.sheet {
+  padding: 5mm 15mm 10mm 15mm;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック","MS P Gothic",Osaka,Arial,sans-serif;
+}
+body {
+  font-size: 12pt;
+  font-weight: normal;
+}

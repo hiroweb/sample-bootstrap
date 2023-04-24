@@ -1,0 +1,318 @@
+/*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma
+Code copyright 2016 Jeremy Thomas
+Code released under the MIT license
+https://opensource.org/licenses/mit-license.php
+ThemeName: Mieru
+Author: H.Saitoh
+Version: 1.1
+*/
+// 追記 ///////////////////////////
+
+
+//$primary:#30a866;
+//$primary:#1e95d4;
+// $primary:#2AAC66;
+// $info:#369cab;
+// $link:#485FC7;
+//$link:#277545;
+
+// $base:#5FB2DF;
+// $secondary: #1BC2B1;
+// $document:#1C68BA;
+// $warning:#FFE08A;
+// $danger:#F14668;
+
+$kojin:#c3ad90;
+$mosyu:#877996;
+$renraku:#5176A4;
+
+
+$patient:#c3ad90;
+$mother:#968695;
+$father:#376FAF;
+$shinpai:#A59393;
+$irai:#877996;
+
+
+// 「地元密着型のモダンな外構工事業者」のテーマで、SCSSのカラースキーマを３種提案してください。
+// カラースキーマのタイトルはそれぞれ、
+// ■ナチュラル・ブルー
+// ■ナチュラル・グリーン
+// ■ナチュラル・オレンジ
+
+// とします。変数は下記の通りです
+
+// $primary:
+// $secondry:
+// $info:
+// $success:
+// $warning:
+// $danger:
+// $link:
+// $base:
+// $footerTextColor:
+// $footerBackground:
+
+// 加えて、
+// ・$baseはf0f0f0としてください。
+// ・配色は和風を意識してください。
+
+
+
+
+
+//■ナチュラル・オレンジ
+$primary: #7c4d3f;
+$secondary: #4d4d4d;
+$info: #d4c7a4;
+$success: #b8ac8e;
+$warning: #f5c16c;
+$danger: #b23a48;
+$link: #b27a5e;
+$base: #f0f0f0;
+$footerTextColor: #ffffff;
+$footerBackground: #222222;
+
+//■ナチュラル・ブルー
+$primary: #4f6d7a;
+$secondary: #4d4d4d;
+$info: #c8d7cb;
+$success: #b3c1a7;
+$warning: #f5c16c;
+$danger: #b23a48;
+$link: #7aa2b2;
+$base: #f0f0f0;
+$footerTextColor: #ffffff;
+$footerBackground: #222222;
+
+
+//■ナチュラル・グリーン
+$primary: #476a6f;
+$secondary: #4d4d4d;
+$info: #c7d2c2;
+$success: #b0bda6;
+$warning: #f5c16c;
+$danger: #b23a48;
+$link: #73937d;
+$base: #f0f0f0;
+$footerTextColor: #ffffff;
+$footerBackground: #222222;
+
+
+$styleColors:(
+  primary:$primary,
+  info:$info,
+  link:$link,
+  secondary:$secondary,
+  base:$base,
+  warning:$warning,
+  danger:$danger,
+);
+
+$styleSizes:(
+  1:4rem,
+  2:3rem,
+  3:2rem,
+  4:1.5rem,
+  5:1.2rem,
+  6:1rem,
+  7:0.7rem
+);
+
+
+
+// //////////////////////////////////////////////////////////
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../../node_modules/bulma/sass/utilities/functions.sass";
+// // 〇新しくsecondaryというテーマカラーを追加
+$secondary-invert: findColorInvert($secondary) !default;
+$secondary-light: findLightColor($secondary) !default;
+$secondary-dark: findDarkColor($secondary) !default;
+$link-invert: findColorInvert($link) !default;
+$link-light: findLightColor($link) !default;
+$link-dark: findDarkColor($link) !default;
+$base-invert: findColorInvert($base) !default;
+$base-light: findLightColor($base) !default;
+$base-dark: findDarkColor($base) !default;
+
+
+
+$custom-colors: (
+  'secondary': ($secondary, $secondary-invert, $secondary-light, $secondary-dark),
+  'link': ($link, $link-invert, $link-light, $link-dark),
+  'base': ($base, $base-invert, $base-light, $base-dark),
+);
+@import "../../node_modules/bulma/sass/utilities/derived-variables.sass";
+$tabs-link-active-border-bottom-color:$link;
+$tabs-link-active-color:$link;
+$tabs-toggle-link-active-background-color:$link;
+$tabs-toggle-link-active-border-color:$link;
+$tabs-toggle-link-active-color:$link-invert;
+$breadcrumb-item-color:$link;
+$breadcrumb-item-hover-color:$link-hover;
+
+@import "../../node_modules/bulma/sass/utilities/mixins.sass";
+@import "../../node_modules/bulma/sass/utilities/controls.sass";
+@import "../../node_modules/bulma/sass/utilities/extends.sass";
+
+// //////////////////////////////////////////////////////////
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/elements/_all.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "../../node_modules/bulma/sass/components/_all.sass";
+// //////////////////////////////////////////////////////////
+// // Modal minimal setup
+// // import modal-fx component
+$transition-duration: .3s;
+$transition-duration-newsPaper: .7s;
+$transition-duration-3dslit: .5s;
+$modal-perspective: 1300px;
+$modal-bg-color: rgba($black,.86);
+@import "../../node_modules/bulma-modal-fx/src/_scss/components/modal-fx";
+// //////////////////////////////////////////////////////////
+@import "../../node_modules/bulma/sass/grid/_all.sass";
+@import "../../node_modules/bulma/sass/helpers/_all.sass";
+@import "../../node_modules/bulma/sass/layout/_all.sass";
+@import "../../node_modules/bulma-extensions/bulma-badge/src/sass/index.sass";
+@import "../../node_modules/bulma-switch/src/sass/index.sass";
+@import "../../node_modules/bulma-extensions/bulma-divider/src/sass/index.sass";
+@import "../../node_modules/bulma-extensions/bulma-pageloader/src/sass/index.sass";
+@import "../../node_modules/bulma-extensions/bulma-carousel/src/sass/index.sass";
+@import "../../node_modules/bulma-extensions/bulma-tooltip/src/sass/index.sass";
+
+
+
+body{
+display:flex;
+min-height:100vh;
+flex-direction: column;
+background-color:$base;
+}
+
+footer {
+  background-color: $footerBackground;
+  border-top: 3px solid darken($footerBackground,20%);
+  color: $footerTextColor !important;
+}
+
+
+
+
+.footer_title {
+  color: $footerTextColor !important;
+}
+.wrapper{
+flex:1;
+}
+
+
+.hide{display:none;}
+
+figure.image button.delete{
+  position:absolute;
+  top:8px;
+  right:8px;
+
+}
+
+
+
+/**---------------------------------------------
+* datepickerプラグインとbulmaの干渉の解決
+* bulma selectボックスのアローがindex:4のため。
+**-----------------------------------------------*/
+#ui-datepicker-div{
+z-index:5!important;
+}
+// input[type="text"]{max-width:240px;}
+// input[type="date"],input[type="color"]{max-width:160px;}
+// input[type="search"],input[type="number"],input[type="tel"]{width:180px;}
+// input[type="email"]{width:80%;}
+// input[type="number"]{max-width:120px;text-align:right}
+// input[name*="phone"],input[name*="mobile"],input[name*="fax"],input[name="AGT_night"]{width:140px;}
+// input[name*="postal"]{width:110px;}
+// input[name*="prefecture"]{width:110px;}
+// input[name*="city"]{width:140px;}
+
+// input[name*="year"]{width:48px;}
+// input[name*="month"]{width:48px;}
+// input[name*="day"]{width:48px;}
+// input[name*="member_NO"]{width:180px;}
+// input[name*="diedday"]{width:160px;}
+
+
+// input[name*="ETD_name"]{width:480px;}
+// input[name*="num"]{width:48px;text-align:right;}
+// input[name*="unit"]{width:48px;}
+// input[name*="unitcost"]{width:120px;text-align:right;}
+// span[class*="ETD_cost"]{text-align:right;}
+// input[name*="tax"]{width:48px;text-align:right;}
+
+// .is-fullwidth.textarea,.is-fullwidth.input{
+//   max-width:100%;
+// }
+
+/**---------------------------------------------
+* input numberのスピンボタンの消去
+**-----------------------------------------------*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+
+
+
+
+/**---------------------------------------------
+ * loading画像 20230409
+**-----------------------------------------------*/
+// .sp-1 {
+//   width: 32px;
+//   height: 32px;
+//   clear: both;
+//   margin: 20px auto;
+// }
+
+
+@each $k, $v in $styleSizes {
+  .sp-#{$k} {
+    width: #{$v};
+    height: #{$v};
+    clear: both;
+    margin: 20px auto;
+  }
+
+}
+
+
+
+/* Spinner Circle Rotation */
+.sp-circle {
+  border: 2px rgba(30,30,30,0.25) solid;
+  border-top: 2px rgba(30,30,30,1) solid;
+  border-radius: 50%;
+  animation: spCircRot .6s infinite linear;
+}
+
+@keyframes spCircRot {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
+
+.is-border-top-dashed{
+  border-top:1px dashed #d0d0d0;
+}
+.is-border-bottom-dashed{
+  border-bottom:1px dashed #d0d0d0;
+}
+
+.is-sun{
+  color:#ff5500;
+}
+.is-sat{
+  color:#0055ff;
+}
