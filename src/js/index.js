@@ -4,8 +4,6 @@
 
 import "bootstrap/dist/js/bootstrap.min.js"; // Bootstrap 5のJavaScriptをインポート
 
-import my from './my.js';
-import common from './common.js';
 import '../scss/index.scss';
 import lightGallery from 'lightgallery';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
@@ -23,7 +21,6 @@ import lgVideo from 'lightgallery/plugins/video';
 //   el:"#vue-root",
 //   render: (h) => h(VueApp),
 // });
-console.log(add(3,9));
 console.log('webpack!');
 
 document.querySelector('.btn-back-to-top').addEventListener('click', function() {
